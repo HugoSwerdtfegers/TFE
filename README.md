@@ -13,7 +13,7 @@ and installation can be found here https://gboml.readthedocs.io/en/latest/
 
 To run the simulation with the desired parameters and save the results:
 
-`python3 main.py $config $scenario`
+`python3 main.py -conf $config -sc $scenario`
  
 where you choose between 3 configs and 3 scenarios:    
  
@@ -32,7 +32,7 @@ to start all simulation at once
 
 To obtain cost breakdown graphs as well as capacity comparison 
 
-`python3 analysis.py $scenario`
+`python3 analysis.py -sc $scenario`
 
 where you choose between 3 scenarios
 
@@ -46,7 +46,7 @@ The default case is the reference scenario
 
 To run the simulations and obtain a graph showing the impact of the efficiency of the electrolyser  
 
-`python3 H2_analysis.py $config $scenario`   
+`python3 H2_analysis.py -conf $config - sc $scenario`   
 
 where you choose between 3 configs and 3 scenarios:   
 
