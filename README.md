@@ -38,7 +38,7 @@ The default case is the reference scenario
 
 # How to run electrolyser analysis 
 
-To run the simulations and obtain a graph of the cost as a function of the efficiency of the electrolyser  
+To run the simulations and obtain a graph showing the impact of the efficiency of the electrolyser  
 
 `python3 H2_analysis.py $config $scenario`   
 
