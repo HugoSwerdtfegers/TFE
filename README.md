@@ -24,7 +24,7 @@ The default case is config 1 with reference scenario
 
 # How to run analysis and save plots
 
-To obtain cost breakdown graphs aswell as capacity comparison 
+To obtain cost breakdown graphs as well as capacity comparison 
 
 `python3 analysis.py $scenario`
 
@@ -33,6 +33,8 @@ where you choose between 3 scenarios
 `$scenario \in {reference, optimistic, conservative}`  
 
 The graphs will necessarily be produced for each configuration, so the 3 simulation files must have been generated beforehand.
+
+The default case is the reference scenario
 
 # How to run electrolyser analysis 
 
