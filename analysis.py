@@ -13,11 +13,8 @@ if not os.path.exists("images"):
 
 parser = argparse.ArgumentParser()
 
-
-
 parser.add_argument('--scenario', help='Scenario', 
                         type=str, default="reference", choices=['reference','optimistic','conservative'])
-
 
 args = parser.parse_args()
 

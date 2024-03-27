@@ -4,24 +4,23 @@ import matplotlib.pyplot as plt
 import numpy as np
 import gboml.compiler.classes as gcc
 import argparse
+import os
 
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--config', help='Config',
+parser.add_argument('-conf', '--config', help='Config',
                         type=int, default=1, choices=[1,2,3])
 
-parser.add_argument('--scenario', help='Scenario', 
+parser.add_argument('-sc', '--scenario', help='Scenario', 
                         type=str, default="reference", choices=['reference','optimistic','conservative'])
 
 args = parser.parse_args()
-
 config = args.config 
 scenario = args.scenario
 
 
 years = 5
-
 gboml_model = GbomlGraph(8760*years)
 nodes, edges, global_params = gboml_model.import_all_nodes_and_edges("FT_Products.gboml")
 
@@ -77,3 +76,18 @@ gboml_model.add_hyperedges_in_model(*edges)
 gboml_model.add_global_parameters(global_params)
 gboml_model.build_model()
 solution = gboml_model.solve_gurobi()
+print("Solved")
+
+
+if not os.path.exists("results"):
+        os.makedirs("results")
+
+
+solution, objective, status, solver_info, constraints_information, variables_information = solution
+dico = gboml_model.turn_solution_to_dictionary(solver_info, status, solution, objective, constraints_information, variables_information)
+
+with open("results/config" + str(config) + "_"+ str(scenario) + ".json", "w") as json_file:
+    json_obj = json.dumps(dico)
+    json_file.write(json_obj)
+
+print("Json done")

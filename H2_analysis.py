@@ -8,10 +8,10 @@ import os
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--config', help='Config',
+parser.add_argument('-conf', '--config', help='Config',
                         type=int, default=1, choices=[1,2,3])
 
-parser.add_argument('--scenario', help='Scenario', 
+parser.add_argument('-sc', '--scenario', help='Scenario', 
                         type=str, default="reference", choices=['reference','optimistic','conservative'])
 
 args = parser.parse_args()
