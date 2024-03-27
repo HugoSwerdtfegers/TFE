@@ -28,8 +28,15 @@ The default case is config 1 with reference scenario
 
 # How to run electrolyser analysis 
 
-`python3 H2_analysis.py $config $scenario`
+To run the simulations and obtain a graph of the cost   
+as a function of the efficiency of the electrolyser  
 
+`python3 H2_analysis.py $config $scenario`   
+
+where you choose between 3 configs and 3 scenarios:   
+`$config \in {1, 2, 3}`   
+`$scenario \in {reference, optimistic, conservative}`   
+(WARNING! : Simulation can take several hours)
 
 
 
