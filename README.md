@@ -1,5 +1,4 @@
 # TFE: Optimization of Energy Systems with Carbon Capture and Storage to Reach a Carbon- Free Energy System in Belgium
-GBOML and python codes to run simulation of : 
 
 # Installation
 First you need to prepare your python environment with:   
@@ -15,8 +14,9 @@ and installation can be found here https://gboml.readthedocs.io/en/latest/
 To run the simulation with the desired parameters and save the results:
 
 `python3 main.py $config $scenario`
-
-where you choose between 3 configs and 3 scenarios:   
+ 
+where you choose between 3 configs and 3 scenarios:    
+ 
 `$config \in {1, 2, 3}`   
 `$scenario \in {reference, optimistic, conservative}`   
 
@@ -24,19 +24,30 @@ The default case is config 1 with reference scenario
 
 # How to run analysis and save plots
 
+To obtain cost breakdown graphs aswell as capacity comparison 
+
 `python3 analysis.py $scenario`
+
+where you choose between 3 scenarios
+
+`$scenario \in {reference, optimistic, conservative}`  
+
+The graphs will necessarily be produced for each configuration, so the 3 simulation files must have been generated beforehand.
 
 # How to run electrolyser analysis 
 
-To run the simulations and obtain a graph of the cost   
-as a function of the efficiency of the electrolyser  
+To run the simulations and obtain a graph of the cost as a function of the efficiency of the electrolyser  
 
 `python3 H2_analysis.py $config $scenario`   
 
 where you choose between 3 configs and 3 scenarios:   
+
 `$config \in {1, 2, 3}`   
-`$scenario \in {reference, optimistic, conservative}`   
+`$scenario \in {reference, optimistic, conservative}`  
+
 (WARNING! : Simulation can take several hours)
+
+The default case is config 1 with reference scenario
 
 
 
