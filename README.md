@@ -1,5 +1,5 @@
 # TFE: Optimization of Energy Systems with Carbon Capture and Storage to Reach a Carbon- Free Energy System in Belgium
-GBOML and python codes
+GBOML and python codes to run simulation of : 
 
 # Installation
 First you need to prepare your python environment with:   
@@ -23,6 +23,12 @@ where you choose between 3 configs and 3 scenarios:
 The default case is config 1 with reference scenario
 
 # How to run analysis and save plots
+
+`python3 analysis.py $scenario`
+
+# How to run electrolyser analysis 
+
+`python3 H2_analysis.py $config $scenario`
 
 
 
