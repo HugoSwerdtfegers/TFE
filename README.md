@@ -20,7 +20,13 @@ where you choose between 3 configs and 3 scenarios:
 `$config \in {1, 2, 3}`   
 `$scenario \in {reference, optimistic, conservative}`   
 
-The default case is config 1 with reference scenario
+The default case is config 1 with reference scenario   
+
+If you have a prepared bash environment, you can run: 
+
+`bash run_all.sh`   
+
+to start all simulation at once
 
 # How to run analysis and save plots
 
