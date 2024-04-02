@@ -30,7 +30,7 @@ to start all simulation at once
 
 # How to run analysis and save plots
 
-To obtain cost breakdown graphs as well as capacity comparison 
+To obtain all graphs related to analyses:
 
 `python3 analysis.py -sc $scenario`
 
