@@ -465,7 +465,7 @@ min: vom_stock * petrol_stored[t] + vom_flow * petrol_in[t];
 full_capex = 0;
 lifetime = 30.0;
 annualised_capex = full_capex * global.wacc * (1 + global.wacc)**lifetime / ((1 + global.wacc)**lifetime - 1); // MEur
-fom = 24.97; // MEur/year
+fom = 0; // MEur/year
 vom = 0.0;
 conversion_factor = 1;
 #VARIABLES

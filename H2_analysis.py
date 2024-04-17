@@ -137,7 +137,7 @@ for i in range(len(Efficiency)):
     cost[i] = sum(y)
     
 
-plt.plot(Efficiency, cost)
+plt.scatter(Efficiency, cost)
 plt.fill_between(Efficiency, min(cost), max(cost), where=(Efficiency < 70), color='lightblue', alpha=0.5, label = 'PEM')
 plt.fill_between(Efficiency, min(cost), max(cost), where=(Efficiency >= 70), color='lightcoral', alpha=0.5, label = 'SOEC')
 
