@@ -329,7 +329,7 @@ min: vom_stock * water_stored[t] + vom_flow * water_in[t];
 
 #NODE FT_PROCESS
 #PARAMETERS
-HHV_PETROLE = 12.2; //  GWh/kt
+HHV_PETROLE = 12.2; //  
 full_capex = 1017 * HHV_PETROLE * global.facteur; // to obtain cost in MEur/(kt/h)
 lifetime = 25.0;
 annualised_capex = full_capex * global.wacc * (1 + global.wacc)**lifetime / ((1 + global.wacc)**lifetime - 1); // MEur
