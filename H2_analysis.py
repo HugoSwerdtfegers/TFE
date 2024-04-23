@@ -137,11 +137,16 @@ for i in range(len(Efficiency)):
     cost[i] = sum(y)
     
 
-plt.scatter(Efficiency, cost)
-plt.fill_between(Efficiency, min(cost), max(cost), where=(Efficiency < 70), color='lightblue', alpha=0.5, label = 'PEM')
-plt.fill_between(Efficiency, min(cost), max(cost), where=(Efficiency >= 70), color='lightcoral', alpha=0.5, label = 'SOEC')
+efficacite_PEM = [efficiency[i] for i in range(len(efficacite)) if efficiency[i] < 70]
+efficacite_SOEC = [efficiency[i] for i in range(len(efficacite)) if efficiency[i] >= 70]
+cout_PEM = [cost[i] for i in range(len(cout)) if efficiency[i] < 70]
+cout_SOEC = [cost[i] for i in range(len(cout)) if efficiency[i] >= 70]
+
+plt.scatter(efficacite_PEM, cout_PEM, color='lightblue', label='PEM')
+plt.scatter(efficacite_SOEC, cout_SOEC, color='lightcoral', label='SOEC')
 
 plt.xlabel("Electrolysis Efficiency [%]")
 plt.ylabel("FT-Products Cost [€/kg]")
-plt.legend(loc = (0.765,0.8))
+plt.legend(loc='upper right')
+plt.savefig("images/H2_results.pdf", dpi=150, bbox_inches='tight')
 plt.show()
